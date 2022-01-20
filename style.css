@@ -46,7 +46,7 @@ a {
 
 .navlist a {
   display: inline-block;
-  margin: 0;
+  margin-right: 8px;
   padding: .8rem;
   transition: .2s;
 }
@@ -67,6 +67,12 @@ a {
   height: 100vh;
   width: 100%;
   
+}
+
+@media (max-width: 736px) {
+  .welcome {
+    text-align: center;
+  }
 }
 
 .welcome h1 {
