@@ -1,45 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-    font-family: "Sofia Pro", sans-serif;
-    font-size: 20px;
-    scroll-behavior: smooth;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  /* Nav Styling */
-  
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: lightblue;
-  }
-  
-  .navlist {
-    display: flex;
-    margin-right: 20px;
-  }
-  
-  nav li {
-    padding: 10px 30px;
-  }
-  
-  .navlist a {
-    
-  }
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 20px;
+  scroll-behavior: smooth;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Nav Styling */
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  background-color: lightblue;
+}
+
+.navlist {
+  display: flex;
+}
+
+.navlist a {
+  display: inline-block;
+  margin: 0;
+  padding: .8rem;
+  transition: .2s;
+}
+
+.navlist li a:hover {
+  background-color: #FFFFFF;
+}
+
+/* END Nav Styling */
+
+/* Welcome Section Styling */
+
