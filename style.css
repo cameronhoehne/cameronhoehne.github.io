@@ -103,12 +103,6 @@ a {
   font-size: 4rem;
 }
 
-@media (max-width: 500px) {
-  .welcome h1 {
-    font-size: 5rem;
-  }
-}
-
 .welcome p {
   font-size: 1.4rem;
 }
