@@ -40,7 +40,7 @@ a {
   left: 0;
   margin: 0;
   width: 100%;
-  background-color: #368ABF;
+  background-color: #9cbbd9;
   z-index: 1;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 }
@@ -83,8 +83,8 @@ a {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-color: #63BBF2;
-  
+  padding: 1rem;
+  background-color: mintcream;
 }
 
 @media (max-width: 736px) {
@@ -149,22 +149,24 @@ a {
     transform: translateY(-15px);
   }
 }
+
 /* END Welcome Styling */
 
 /* Projects Styling */
 
 .project {
-  background: #03658C;
+  background: lightskyblue;
   width: 100%;
   text-align: center;
   padding: 40px;
+  border-top: 4px solid white;
 }
 
-.project-header {
-  color: white;
+.project-tile {
+  color: black;
   margin: 2rem auto 2rem auto;
   line-height: 2;
-  border-bottom: 1.2px solid white;
+  border-bottom: 3px solid black;
   max-width: 450px;
 }
 
@@ -176,7 +178,6 @@ a {
   grid-gap: 2rem;
   width: 100%;
   margin: 0, auto;
-  
 }
 
 @media (max-width: 550px) {
@@ -200,3 +201,57 @@ a {
   height: 100%;
   width: 100%;
 }
+
+.tap-me {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+ .tap-me {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: .8rem;
+  background: darkgray;
+   margin-top: 3rem;
+  padding: .5rem;
+  border-radius: 10px;
+  }
+}
+
+/* Contact Styling */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: oldlace;
+  width: 100%;
+  height: 60vh;
+  padding: 1rem;
+  border-top: 4px solid white;
+}
+
+.contact-section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* END Contact Styling */
+
+/* Footer Styling */
+
+.footer {
+  background: darkgray;
+  height: 40px;
+}
+
+/* END Footer Styling */
