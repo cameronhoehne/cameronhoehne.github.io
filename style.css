@@ -16,12 +16,6 @@ html {
   line-height: 1.4;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 ul {
   list-style: none;
 }
@@ -91,7 +85,13 @@ a {
   height: 100vh;
   width: 100%;
   padding: 1rem;
-  background-color: floralwhite;
+  background-color: white;
+}
+
+@media (max-width: 376px) {
+  .welcome h1{
+    margin-top: 100px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -174,8 +174,12 @@ a {
 /* Projects Styling */
 
 .project {
-  background: #dbeeff;
-  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
   text-align: center;
   padding: 40px;
   border-top: 4px solid white;
@@ -189,27 +193,37 @@ a {
   max-width: 450px;
 }
 
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+}
+
+.project-image {
+  max-width: 80vw;
+  max-height: 100%;
+  transition: 250ms;
+}
+
 @media (max-width: 500px) {
   .project-tile {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .project-image {
+    width: 50vw;
   }
 
 }
 
-.project-grid {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 2rem;
-  width: 100%;
-  height: auto;
-  margin: 0, auto;
-}
-
 @media (max-width: 550px) {
-  .project-grid {
-    grid-template-columns: 1fr;
+  .project-image {
+    margin: auto;
+    max-width: 300px;
+    max-height: 300px;
   }
 }
 
@@ -218,15 +232,9 @@ a {
 }
 
 @media (hover) {
-  .project-grid a:hover {
+  .project-image:hover {
   transform: scale(1.03);
  }
-}
-
-.project-image {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
 }
 
 .tap-me {
@@ -237,10 +245,12 @@ a {
 @media (max-width: 600px) {
  .tap-me {
   display: inline-block;
+  height: 2.6em;
+  width: 6em;
   text-transform: uppercase;
   font-size: .8rem;
   background: darkgray;
-   margin-top: 3rem;
+  margin-top: 3rem;
   padding: .5rem;
   border-radius: 10px;
   }
@@ -254,7 +264,7 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: oldlace;
+  background: white;
   width: 100%;
   height: 100vh;
   padding: 1rem;

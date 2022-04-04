@@ -7,7 +7,8 @@ rel="stylesheet">
 <head>
 <script src="https://use.fontawesome.com/97caddfffc.js"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
+<body>
+  
 <!-- Navbar -->
 
 <nav class="nav" id="navbar">
@@ -24,8 +25,8 @@ rel="stylesheet">
 <!-- Welcome Section -->
 
 <section class="welcome" id="welcome-section">
-<h1>CAMERON HOEHNE</h1>
-<p>Front End Developer</p>
+<h1 class="welcome-anim">CAMERON HOEHNE</h1>
+<p class="welcome-anim">Front End Developer</p>
 
 <div class="icon-bar">
  <a href="https://www.linkedin.com/in/cameron-hoehne-2b952a164/" target="_blank">
@@ -39,7 +40,6 @@ rel="stylesheet">
    <i class="fa fa-2x fa-github-square"></i>
  </a>
 
-    
 </div>
 <div class="arrow bounce">
 <a class="fa fa-arrow-down fa-2x" href="#projects"></a>
@@ -51,7 +51,7 @@ rel="stylesheet">
 <!-- Project Section -->
 
 <section class="project" id="projects">
-<h2 class="project-tile">Here's some of my projects</h2>
+<h2 class="project-tile">Here are some of my projects</h2>
 
 <div class="project-grid">
   <a
@@ -59,6 +59,7 @@ rel="stylesheet">
      target="_blank">
   <img
        class="project-image"
+       id="img1"
        src="https://i.imgur.com/umis4iW.png" 
        title="source: imgur.com" 
        alt="JavaScript Timer App"/>
@@ -69,6 +70,7 @@ rel="stylesheet">
      target="_blank">
   <img
        class="project-image"
+       id="img2"
        src="https://i.imgur.com/oKMsaKZ.png" 
        title="source: imgur.com" 
        alt="My landing page project"/>
@@ -79,6 +81,7 @@ rel="stylesheet">
      target="_blank">
   <img
        class="project-image"
+       id="img3"
        src="https://i.imgur.com/P38Ire5.png" title="source: imgur.com"
        alt="My technical documentation page project"/>
   </a>
@@ -87,6 +90,7 @@ rel="stylesheet">
      target="_blank">
   <img
        class="project-image"
+       id="img4"
        src="https://i.imgur.com/SVK1zpQ.png"
        alt="My survey form project."/>
   </a>
@@ -119,5 +123,34 @@ rel="stylesheet">
 <footer class="footer">
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/ScrollTrigger.min.js"></script>
+<script>
+
+//Welcome Animation
+
+const tl = gsap.timeline({});
+  tl.from(".welcome-anim", {duration: 1, y: -30, opacity: 0, ease: "power2inout", stagger: 0.4})
+  .from(".icon-bar", {duration: .5, opacity: 0, scale: 0, ease: "back"}, 1)
+
+//Projects Scroll Animation
+
+const tlScrl = gsap.timeline({
+  scrollTrigger: {
+    start: "top bottom",
+    end: "bottom center",
+    markers: true,
+    scrub: true,
+    preventOverlaps: true,
+    toggleActions: "restart none reverse pause"
+  },
+})
+
+
+
+</script>
+<script src="app.js"></script>
+
+</body>
 
 </head>  
