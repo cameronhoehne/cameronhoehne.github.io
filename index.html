@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 
 <link href="https://fonts.cdnfonts.com/css/sofia-pro"
 rel="stylesheet">
@@ -142,26 +142,30 @@ rel="stylesheet">
 //Welcome Animation
 
 const tl = gsap.timeline({});
-  tl.from(".welcome-anim", {duration: 1, y: -30, opacity: 0, ease: "power2inout", stagger: 0.4})
-  .from(".icon-bar", {duration: .5, opacity: 0, scale: 0, ease: "back"}, 1)
-
+  
+ function init(){
+  tl.from(".welcome-anim", {autoAlpha: 0, duration: 1, y: -30, opacity: 0, ease: "power2inout", stagger: 0.4})
+  .from(".icon-bar", {autoAlpha: 0, duration: .5, opacity: 0, scale: 0, ease: "back"}, 1)
+ }
+  
+window.addEventListener("load", function(event) {
+  init();
+});
 //Projects Scroll Animation
 
-const tlScrl = gsap.timeline({
-  scrollTrigger: {
-    start: "top bottom",
-    end: "bottom center",
-    markers: true,
-    scrub: true,
-    preventOverlaps: true,
-    toggleActions: "restart none reverse pause"
-  },
-})
+// const tlScrl = gsap.timeline({
+//   scrollTrigger: {
+//     start: "top bottom",
+//     end: "bottom center",
+//     scrub: true,
+//     preventOverlaps: true,
+//     toggleActions: "restart none reverse pause"
+//   },
+// })
 
 
 
 </script>
-<script src="app.js"></script>
 
 </body>
 
