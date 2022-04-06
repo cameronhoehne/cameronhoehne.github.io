@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.cdnfonts.com/css/sofia-pro"
 rel="stylesheet">
@@ -153,15 +153,20 @@ window.addEventListener("load", function(event) {
 });
 //Projects Scroll Animation
 
-// const tlScrl = gsap.timeline({
-//   scrollTrigger: {
-//     start: "top bottom",
-//     end: "bottom center",
-//     scrub: true,
-//     preventOverlaps: true,
-//     toggleActions: "restart none reverse pause"
-//   },
-// })
+const tlScrl = gsap.timeline({
+  scrollTrigger: {
+    // start: "top bottom",
+    end: "bottom center",
+    preventOverlaps: true,
+    toggleActions: "restart none reverse pause"
+  },
+})
+
+tlScrl.from("#img1", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
+tlScrl.from("#img2", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
+tlScrl.from("#img3", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
+tlScrl.from("#img4", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
+tlScrl.from("#img5", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
 
 
 
