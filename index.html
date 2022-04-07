@@ -120,10 +120,10 @@ rel="stylesheet">
 
 <section id="contact" class="contact-section">
 <div>
-<h1> Let's Talk.</h1>
- <p> Send me an email or connect on LinkedIn</p>
+<h1 id="cont-anim"> Let's Talk.</h1>
+ <p id="cont-anim"> Send me an email or connect on LinkedIn</p>
 </div>  
- <div class="icon-bar contact-margin">
+ <div class="icon-bar2 contact-margin">
  <a href="mailto:cameronhoehne@gmail.com" target="_blank" download>
   <i class="fa fa-2x fa-envelope"></i>
  </a>
@@ -162,13 +162,20 @@ const tlScrl = gsap.timeline({
   },
 })
 
-tlScrl.from("#img1", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
-tlScrl.from("#img2", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
-tlScrl.from("#img3", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
-tlScrl.from("#img4", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
-tlScrl.from("#img5", {autoAlpha: 0, y: 100, opacity: 0, ease: "linear"})
+tlScrl.from("#img1", {y: 100, opacity: 0, ease: "Power2InOut"})
+tlScrl.from("#img2", {y: 100, opacity: 0, ease: "Power2InOut"})
+tlScrl.from("#img3", {y: 100, opacity: 0, ease: "Power2InOut"})
+tlScrl.from("#img4", {y: 100, opacity: 0, ease: "Power2InOut"})
+tlScrl.from("#img5", {y: 100, opacity: 0, ease: "Power2InOut"})
 
+//Contact Page Animation
 
+const tlCont = gsap.timeline({
+  scrollTrigger: ".contact-section"
+});
+
+tlCont.from("#cont-anim", {duration: 1, y: -30, opacity: 0, ease: "power2inout", stagger: 0.4})
+.from(".icon-bar2", {autoAlpha: 0, duration: .5, opacity: 0, scale: 0, ease: "back"}, 1)
 
 </script>
 
