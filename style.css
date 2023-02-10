@@ -151,6 +151,9 @@ a {
   .icon-bar a:hover {
     transform: scale(1.2);
   }
+  .icon-bar2 a:hover {
+    transform: scale(1.2);
+  }
 }
 
 /* Arrow link styling */
