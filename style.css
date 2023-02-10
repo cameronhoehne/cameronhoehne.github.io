@@ -69,7 +69,7 @@ a {
 
 @media (hover) {
  .navlist a:hover {
-  background-color: #FFFFFF;
+  background-color: #F45681;
   transform: scale(1.2);
  } 
 }
