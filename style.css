@@ -147,6 +147,11 @@ a {
   transition: 200ms;
 }
 
+.icon-bar2 a  {
+  cursor: pointer;
+  transition: 200ms;
+}
+
 @media (hover) {
   .icon-bar a:hover {
     transform: scale(1.2);
