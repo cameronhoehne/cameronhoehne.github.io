@@ -70,7 +70,7 @@ a {
 @media (hover) {
  .navlist a:hover {
   background-color: #FFFFFF;
-  transform: scale(1.2);
+  transform: scale(1.05);
   margin-bottom: 10px;
   border-radius: 5px;
  } 
