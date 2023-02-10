@@ -71,6 +71,7 @@ a {
  .navlist a:hover {
   background-color: #FFFFFF;
   transform: scale(1.2);
+  margin-bottom: 10px;
  } 
 }
 
