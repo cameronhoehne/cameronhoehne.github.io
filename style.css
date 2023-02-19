@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -123,9 +124,10 @@ a {
   transform: translateY(40%);
 }
 
-@media (max-width: 460px) {
+@media (max-width: 500px) {
   .welcome h1 {
     font-size: 2.8rem;
+    font-family: "Merriweather", serif;
   }
 }
 
@@ -460,6 +462,7 @@ a {
 @media (max-width: 500px) {
   .contact-section h1 {
     font-size: 2.6rem;
+    font-family: "Merriweather", serif;
   }
   .contact-section p {
     font-size: 1rem;
