@@ -127,9 +127,6 @@ a {
   .welcome h1 {
     font-size: 2.8rem;
   }
-  .h1-background {
-    background-color: #B5715A;
-  }
 }
 
 @media (max-width: 376px) {
