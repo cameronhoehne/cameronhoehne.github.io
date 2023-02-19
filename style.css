@@ -115,7 +115,7 @@ a {
   font-family: "Abril Fatface", cursive;
   font-kerning: none;
   font-size: 4rem;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: .5px .5px black;
   color: #F7EEE4;
   animation: fade-in-h1 .75s cubic-bezier(.54,.05,.35,.95) forwards;
   animation-delay: .3s;
@@ -415,7 +415,7 @@ a {
   font-family: "Abril Fatface", cursive;
   font-kerning: none;
   font-size: 4rem;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: .5px .5px black;
   color: #F7EEE4;
   font-weight: 800;
   opacity: 0;
