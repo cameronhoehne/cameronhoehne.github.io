@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  scroll-behavior: smooth;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #F7EEE4;
+}
+
+/* Nav Styling */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #ca7e65;
+  z-index: 1;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 500px) {
+  .nav {
+    justify-content: center;
+  }
+  .navlist {
+    margin-left: 20px;
+  }
+}
+
+.navlist {
+  display: flex;
+}
+
+.navlist a {
+  display: inline-block;
+  margin-right: 8px;
+  padding: .8rem;
+  transition: .2s;
+}
+
+@media (max-width: 500px){
+  .navlist a {
+    font-size: 1rem;
+  }
+}
+
+@media (hover) {
+ .navlist a:hover {
+  background-color: #3E5167;
+  transform: scale(1.05);
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+ } 
+}
+
+/* END Nav Styling */
+
+/* Welcome Section Styling */
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  background-color: #3E5167;
+}
+
+@media (max-width: 800px) {
+  .welcome {
+    text-align: center;
+  }
+}
+
+.h1-background {
+  background-color: #ca7e65;
+  padding: 2em;
+  border-radius: 20px;
+  animation: fade-in-block .75s cubic-bezier(.54,.05,.35,.95) forwards;
+  opacity: 0;
+  transform: translateY(-100%);
+  margin-bottom: 1em;
+  box-shadow: 2px 2px 5px -2px;
+}
+
+.welcome h1 {
+  font-family: "Abril Fatface", cursive;
+  font-kerning: none;
+  font-size: 4rem;
+  color: #F7EEE4;
+  animation: fade-in-h1 .75s cubic-bezier(.54,.05,.35,.95) forwards;
+  animation-delay: .3s;
+  opacity: 0;
+  transform: translateY(40%);
+}
+
+@media (max-width: 460px) {
+  .welcome h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .h1-background {
+    padding: 1em;
+  }
+  .welcome h1 {
+    font-size: 2rem;
+  }
+  .welcome p {
+    font-size: .8rem;
+  }
+}
+
+.welcome p {
+  font-size: 2rem;
+  color: #F7EEE4;
+  opacity: 0;
+  transform: translateY(40%);
+  animation: fade-in-p .75s cubic-bezier(.70,.05,.35,.95) forwards;
+  animation-delay: .55s;
+  margin-bottom: .8em;
+}
+
+@media (max-width: 500px) {
+  .welcome p {
+    font-size: 1.4rem;
+  }  
+  }
+
+.icon-bar {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem;
+  gap: 1.5rem;
+  animation: pop-in-icon .75s cubic-bezier(.70,.05,.35,.95) forwards;
+  animation-delay: .75s;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.icon-bar a  {
+  cursor: pointer;
+  transition: 200ms;
+}
+
+@media (hover) {
+  .icon-bar a:hover {
+    transform: scale(1.2);
+  }
+  .icon-bar2 a:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 376px) {
+  .icon-bar a {
+    font-size: 1rem;
+  }
+  .arrow a {
+    font-size: 1.8rem;
+  }
+}
+
+@keyframes fade-in-block {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in-h1 {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in-p {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes pop-in-icon {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Arrow link styling */
+
+.arrow-container {
+  opacity: 0;
+  animation: arrow-fade-in .5s linear forwards;
+  animation-delay: 2s;
+}
+
+.arrow-link {
+  color: black;
+  text-decoration: none;
+}
+
+.arrow {
+  text-align: center;
+  margin-top: 4em;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes arrow-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* END Welcome Styling */
+
+/* Projects Styling */
+
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #3E5167;
+  text-align: center;
+  padding: 40px;
+}
+
+.project-tile {
+  font-size: 1.6rem;
+  color: #F7EEE4;
+  margin: 2rem auto 2rem auto;
+  line-height: 2;
+  border-bottom: 3px solid #F7EEE4;
+  max-width: 450px;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+}
+
+.project-grid a:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  max-width: 80vw;
+  max-height: 100%;
+  transition: 250ms;
+  opacity: 0;
+  transition: opacity .5s ease;
+  transform: translateY(30%) scale(1);
+}
+
+.fade-in {
+  opacity: 1;
+  animation: project-slide-up .5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+@keyframes project-slide-up {
+  from {
+    transform: translateY(30%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 500px) {
+  .project-tile {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .project-image {
+    width: 50vw;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .project-image {
+    margin: auto;
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+.project-grid a {
+  transition: 250ms;
+}
+
+.tap-me {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+ .tap-me {
+  display: inline-block;
+  height: 2.6em;
+  width: 6em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: #F7EEE4;
+  background: #ca7e65;
+  margin-top: 3rem;
+  padding: .5rem;
+  border-radius: 10px;
+  }
+}
+
+/* Contact Styling */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #3E5167;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.contact-background {
+  background-color: #ca7e65;
+  padding: 2em;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateY(-30%);
+  margin-bottom: 1em;
+  box-shadow: 2px 2px 5px -2px;
+}
+
+.contact-anim1 {
+  opacity: 1;
+  animation: contact-fade-in-block .75s cubic-bezier(.54,.05,.35,.95) forwards;
+}
+
+.contact-section h1 {
+  font-family: "Abril Fatface", cursive;
+  font-kerning: none;
+  font-size: 4rem;
+  color: #F7EEE4;
+  font-weight: 800;
+  opacity: 0;
+}
+
+.contact-anim2 {
+  animation: contact-fade-in-h1 .75s cubic-bezier(.54,.05,.35,.95) forwards;
+  animation-delay: .4s;
+}
+
+.contact-section p {
+  color:#F7EEE4;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  opacity: 0;
+}
+
+.contact-anim3 {
+  animation: contact-fade-in-p .75s cubic-bezier(.54,.05,.35,.95) forwards;
+  animation-delay: .8s;
+}
+
+.icon-bar2 {
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem;
+  gap: 1.5rem;
+  opacity: 0;
+}
+
+.icon-bar2 a  {
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.contact-anim4 {
+  animation: contact-pop-in-icon .75s cubic-bezier(.54,.05,.35,.95) forwards;
+  animation-delay: 1.2s;
+}
+
+@media (max-width: 500px) {
+  .contact-section h1 {
+    font-size: 2.6rem;
+  }
+  .contact-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .contact-background {
+    padding: 1em;
+  }
+  .icon-bar2 a {
+    font-size: 1rem;
+  }
+}
+
+@keyframes contact-fade-in-block {
+  from {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes contact-fade-in-h1 {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes contact-fade-in-p {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes contact-pop-in-icon {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* END Contact Styling */
+
+/* Footer Styling */
+
+.footer {
+  background: darkgray;
+  height: 40px;
+}
+
+/* END Footer Styling */
