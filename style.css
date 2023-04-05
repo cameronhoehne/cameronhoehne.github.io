@@ -106,7 +106,7 @@ a {
   padding: 2em;
   border-radius: 20px;
   animation: fade-in-block .75s cubic-bezier(.54,.05,.35,.95) forwards;
-  animation-delay: .5s;
+  animation-delay: .3s;
   opacity: 0;
   transform: translateY(-100%);
   margin-bottom: 1em;
@@ -120,7 +120,7 @@ a {
   text-shadow: .5px .5px black;
   color: #F7EEE4;
   animation: fade-in-h1 .75s cubic-bezier(.54,.05,.35,.95) forwards;
-  animation-delay: .8s;
+  animation-delay: .6s;
   opacity: 0;
   transform: translateY(40%);
 }
@@ -151,7 +151,7 @@ a {
   opacity: 0;
   transform: translateY(40%);
   animation: fade-in-p .75s cubic-bezier(.70,.05,.35,.95) forwards;
-  animation-delay: 1.05s;
+  animation-delay: .85s;
   margin-bottom: .8em;
 }
 
@@ -167,7 +167,7 @@ a {
   padding: 1.2rem;
   gap: 1.5rem;
   animation: pop-in-icon .75s cubic-bezier(.70,.05,.35,.95) forwards;
-  animation-delay: 1.25s;
+  animation-delay: 1.05s;
   opacity: 0;
   transform: scale(0);
 }
@@ -245,7 +245,7 @@ a {
 .arrow-container {
   opacity: 0;
   animation: arrow-fade-in .5s linear forwards;
-  animation-delay: 2.5s;
+  animation-delay: 2.3s;
 }
 
 .arrow-link {
