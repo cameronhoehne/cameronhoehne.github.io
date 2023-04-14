@@ -326,7 +326,7 @@ a {
 .modal h3 {
   font-family: "Lato", sans-serif;
   margin: 2rem 0rem 2rem 0rem;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   color: #F7EEE4;
   background-color: #ca7e65;
   border-radius: 20px;
@@ -337,6 +337,11 @@ a {
   color: #F7EEE4;
   max-width: 30rem;
   margin: 0rem 0rem 2rem 0rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
 }
 
 button {
@@ -358,6 +363,28 @@ button:hover {
 .show {
   opacity: 1;
   transform: translateY(0%);
+}
+
+@media (max-width: 600px) {
+  .modal h3 {
+    margin: .6rem 0rem .6rem 0rem;
+    font-size: .6rem;
+    padding: .4rem;
+  }
+  .modal p {
+    font-size: .5rem;
+    max-width: 10rem;
+    padding: .2rem;
+    margin: 0 0 .4rem 0;
+  }
+  .button-container {
+    flex-direction: row;
+  }
+  button {
+    font-size: .4rem;
+    margin: 0rem .4rem 0rem .4rem;
+    padding: .4rem;
+  }
 }
 
 .project-grid {
