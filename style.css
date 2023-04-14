@@ -374,7 +374,8 @@ button:hover {
   transition: .5s ease;
 }
 
-.project-grid .image-container:hover {
+.project-grid .image-container:hover,
+.project-grid .image-container:active {
   transform: scale(1.05);
   z-index: 1;
 }
