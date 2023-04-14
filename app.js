@@ -1,10 +1,11 @@
 const images = document.querySelectorAll(".project-image");
+const links = document.querySelectorAll(".image-container");
 const container = document.querySelector(".contact-section");
 const contact = document.querySelectorAll(".contact-background");
 const contactH1 = document.querySelector(".cont-h1");
 const contactP = document.querySelector(".cont-p");
 const contactIcon = document.querySelector(".icon-bar2");
-
+const modal = document.querySelectorAll(".modal");
 
 const options = {
     rootMargin: "0px 0px -100px 0px",
@@ -36,6 +37,17 @@ const contactCallback = function(entries, observer2) {
     }
    })
 }
+
+links.forEach((link, idx) => {
+    link.addEventListener("mouseover", (() => {
+        console.log("over")
+        modal[idx].classList.add("show")
+    }))
+    link.addEventListener("mouseout", (() => {
+        console.log("out")
+        modal[idx].classList.remove("show")
+    }))
+})
 
 const observer = new IntersectionObserver(imagesCallback, options);
 const observer2 = new IntersectionObserver(contactCallback, options2);
