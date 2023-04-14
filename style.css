@@ -17,6 +17,8 @@ html {
   font-size: 20px;
   scroll-behavior: smooth;
   line-height: 1.4;
+  width: 100%;
+  height: 100vh;
 }
 
 ul {
@@ -40,7 +42,7 @@ a {
   margin: 0;
   width: 100%;
   background-color: #ca7e65;
-  z-index: 1;
+  z-index: 999;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -71,8 +73,7 @@ a {
 }
 
 @media (hover) {
- .navlist a:hover,
-  .navlist a:active {
+ .navlist a:hover {
   background-color: #3E5167;
   transform: scale(1.05);
   margin-top: 5px;
@@ -368,22 +369,44 @@ button:hover {
 
 @media (max-width: 600px) {
   .modal h3 {
-    margin: .6rem 0rem .6rem 0rem;
-    font-size: .6rem;
+    margin: 2rem 0rem 1.4rem 0rem;
+    font-size: 1rem;
     padding: .4rem;
   }
   .modal p {
-    font-size: .5rem;
-    max-width: 10rem;
+    font-size: .6rem;
+    max-width: 15rem;
     padding: .2rem;
-    margin: 0 0 .4rem 0;
+    margin: 0 0 2rem 0;
   }
   .button-container {
     flex-direction: row;
   }
   button {
-    font-size: .4rem;
+    font-size: .8rem;
     margin: 0rem .4rem 0rem .4rem;
+    padding: .4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .modal h3 {
+    margin: 1rem 0rem .8rem 0rem;
+    font-size: 1rem;
+    padding: .4rem;
+  }
+  .modal p {
+    font-size: .6rem;
+    max-width: 12rem;
+    padding: .2rem;
+    margin: 0 0 1rem 0;
+  }
+  .button-container {
+    flex-direction: row;
+  }
+  button {
+    font-size: .6rem;
+    margin: 0rem .2rem 0rem .2rem;
     padding: .4rem;
   }
 }
@@ -392,7 +415,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 50%;
 }
 
 .project-grid .image-container {
@@ -409,11 +431,13 @@ button:hover {
 }
 
 .project-image {
-  max-width: 80vw;
+  max-width: 60vw;
   transition: 250ms;
   opacity: 0;
   transition: opacity .5s ease;
   transform: translateY(30%) scale(1);
+  object-fit: cover;
+  margin-bottom: 2rem;
 }
 
 .fade-in {
@@ -430,24 +454,31 @@ button:hover {
   }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 1800px) {
+  .project-image {
+    object-fit: cover;
+  }
+
+}
+
+@media (max-width: 600px) {
   .project-tile {
     font-size: 1.1rem;
   }
-}
-
-@media (min-width: 1800px) {
-  .project-image {
-    width: 50vw;
+  .project-grid {
+    width: 100%;
+    height: 100vh;
   }
-
-}
-
-@media (max-width: 550px) {
+  .image-container {
+    width: 80vw;
+    height: 100%;
+    margin-bottom: 1rem;
+  }
   .project-image {
     margin: auto;
-    max-width: 300px;
-    max-height: 300px;
+    object-fit: cover;
+    min-width: 100%;
+    height: 100%;
   }
 }
 
