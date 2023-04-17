@@ -120,6 +120,7 @@ a {
   font-kerning: none;
   font-size: 4rem;
   text-shadow: .5px .5px black;
+  text-align: center;
   color: #F7EEE4;
   animation: fade-in-h1 .75s cubic-bezier(.54,.05,.35,.95) forwards;
   animation-delay: .6s;
@@ -297,7 +298,6 @@ a {
   justify-content: center;
   background: #3E5167;
   text-align: center;
-  padding: 40px;
 }
 
 .project-tile {
@@ -307,6 +307,14 @@ a {
   line-height: 2;
   border-bottom: 3px solid #F7EEE4;
   max-width: 450px;
+}
+
+.project-grid .image-container {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  transition: .5s ease;
+  margin-bottom: 2rem;
 }
 
 .modal {
@@ -327,8 +335,8 @@ a {
 
 .modal h3 {
   font-family: "Lato", sans-serif;
-  margin: 2rem 0rem 2rem 0rem;
-  font-size: 2.4rem;
+  margin: 3rem 0rem 2rem 0rem;
+  font-size: 2rem;
   color: #F7EEE4;
   background-color: #ca7e65;
   border-radius: 20px;
@@ -343,7 +351,7 @@ a {
 
 .button-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 button {
@@ -352,7 +360,7 @@ button {
   border: none;
   border-radius: 20px;
   transition: .4s ease;
-  margin: 1rem 0rem 1rem 0rem;
+  margin: 1rem;
   color: #F7EEE4;
   font-weight: 700;
   font-size: 1rem;
@@ -417,13 +425,6 @@ button:hover {
   align-items: center;
 }
 
-.project-grid .image-container {
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  transition: .5s ease;
-}
-
 .project-grid .image-container:hover,
 .project-grid .image-container:active {
   transform: scale(1.05);
@@ -431,13 +432,12 @@ button:hover {
 }
 
 .project-image {
-  max-width: 60vw;
+  max-width: 50vw;
   transition: 250ms;
   opacity: 0;
   transition: opacity .5s ease;
   transform: translateY(30%) scale(1);
   object-fit: cover;
-  margin-bottom: 2rem;
 }
 
 .fade-in {
