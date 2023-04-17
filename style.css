@@ -331,6 +331,7 @@ a {
   transition: .35s ease-in-out;
   transition-delay: .1s;
   transform: translateY(100%);
+  overflow: hidden;
 }
 
 .modal h3 {
