@@ -386,7 +386,7 @@ button:hover {
     font-size: .6rem;
     max-width: 15rem;
     padding: .2rem;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
   }
   .button-container {
     flex-direction: row;
